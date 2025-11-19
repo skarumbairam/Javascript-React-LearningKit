@@ -1,6 +1,6 @@
 # Javascript React Learning Kit 🚀
 
-**Frontend Developer Quide, JavaScript, React, Redux Tool Kit, Node.js, TypeScript, Unit Test, Jest, Cypress, and interview Preparations.**
+**Frontend Developer Quide, JavaScript, React, Redux Tool Kit, React Testing Library, Node.js, TypeScript, Cypress, DevOps, DSAs Problems and Interview Preparations Tasks.**
 
 ## Table of Contents
 
@@ -16,22 +16,22 @@
   - [Callback, Callback Hell](#callbacks)
   - [Promises & Async/Await](#promises)
 
-### Intro of Javascript
+## Intro of Javascript
 
-### Closure
+## Closure
 
-### Variable Declaration
+## Variable Declaration
 
-### Hoisting, Scoping, Execution Context
+## Hoisting, Scoping, Execution Context
 
-### Event Loop & Asynchornous Of Javascript
+## Event Loop & Asynchornous Of Javascript
 
-### Types of Functions
+## Types of Functions
 
-### Prototypes & Inheritance
+## Prototypes & Inheritance
 
-### The 'this' keyword
+## The 'this' keyword
 
-### Callback, Callback Hell
+## Callback, Callback Hell
 
-### Promises & Async/Await
+## Promises & Async/Await
