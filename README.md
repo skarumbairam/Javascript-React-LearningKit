@@ -1,13 +1,13 @@
 # Javascript React Learning Kit 🚀
 
-**Frontend Developer Quide, JavaScript, React, Redux Tool Kit, React Testing Library, Node.js, TypeScript, Cypress, DevOps, DSAs Problems and Interview Preparations Tasks.**
+**Frontend Developer Guide, JavaScript, React, Redux ToolKit, React Testing Library, Node.js, TypeScript, Cypress, DevOps, DSA Problems and Interview Preparations Tasks.**
 
 ## Table of Contents
   - [Intro to JavaScript](#intro-to-javascript)
   - [Closure](#closure)
   - [Variable Declaration](#variable-declaration)
   - [Hoisting, Scoping, Execution Context](#hoisting-scoping-execution-context)
-  - [Event Loop & Asynchronous Of Javascript](#event-loop--asynchronous-of-javascript)
+  - [Event Loop and Asynchronous Javascript](#event-loop-and-asynchronous-javascript)
   - [Types of Functions](#types-of-functions)
   - [Prototypes & Inheritance](#prototypes--inheritance)
   - [The 'this' keyword](#the-this-keyword)
@@ -172,7 +172,7 @@ console.log("Block scope:", i);                // ❌ ReferenceError
 ```
   
 
-## Event Loop & Asynchornous Of Javascript
+## Event Loop and Asynchronous JavaScript
 - JavaScript is a single-threaded, non-blocking, and asynchronous language. It achieves concurrency through its event loop mechanism.
 - The Event Loop acts as a coordinator between the Call Stack and the Task Queues. It continuously monitors the call stack and, when it becomes empty, it pushes pending tasks from the queues into the call stack for execution. This ensures the application remains responsive and performs non-blocking operations smoothly.
 - The event loop primarily works with three main components:
@@ -189,4 +189,4 @@ console.log("Block scope:", i);                // ❌ ReferenceError
 
 ## Callback, Callback Hell
 
-## Promises & Async/Await
+## Promises & Async Await
