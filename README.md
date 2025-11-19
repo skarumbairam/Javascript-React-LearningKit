@@ -1,2 +1,2 @@
-# Javascript-React-LearningKit
-Guide to Frontend, Javascript, React, Redux, TypeScript, Node JS interview Preparations
+# Javascript-React-Learning Kit
+Guide to Frontend, JavaScript, React, Redux, TypeScript, Node.js, Unit Test, Jest, Cypress, and interview Preparations.
