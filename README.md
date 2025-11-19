@@ -8,19 +8,19 @@
   - [Intro of Javascript](#javascript)
   - [Closure](#closure)
   - [Variable Decleration](#variable-decleration)
-  - [Hoisting, Scoping, Execution Context](#hoisting-scoping)
-  - [Event Loop & Asynchornous Of Javascript](#event-loop)
-  - [Types of Functions](#function-types)
-  - [Prototypes & Inheritance](#prototypes)
-  - [The 'this' keyword](#this-key)
-  - [Callback, Callback Hell](#callbacks)
-  - [Promises & Async/Await](#promises)
+  - [Hoisting, Scoping, Execution Context](#hoisting-scoping-execution-context)
+  - [Event Loop & Asynchronous Of Javascript](#event-loop--asynchronous-of-javascript)
+  - [Types of Functions](#tyoes-of-functions)
+  - [Prototypes & Inheritance](#prototypes--inheritance)
+  - [The 'this' keyword](#the-this-keyword)
+  - [Callback, Callback Hell](#callback-callback-hell)
+  - [Promises & Async Await](#promises--async-await)
 
 ## Intro of Javascript
 
 ## Closure
 
-## Variable Declaration
+## Variable Decleration
 
 ## Hoisting, Scoping, Execution Context
 
