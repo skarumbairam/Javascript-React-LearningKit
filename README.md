@@ -173,6 +173,13 @@ console.log("Block scope:", i);                // ❌ ReferenceError
   
 
 ## Event Loop & Asynchornous Of Javascript
+- JavaScript is a single-threaded, non-blocking, and asynchronous language. It achieves concurrency through its event loop mechanism.
+- The Event Loop acts as a coordinator between the Call Stack and the Task Queues. It continuously monitors the call stack and, when it becomes empty, it pushes pending tasks from the queues into the call stack for execution. This ensures the application remains responsive and performs non-blocking operations smoothly.
+- The event loop primarily works with three main components:
+- **Call Stack**: The Call Stack is where JavaScript executes code line by line, following the Last In, First Out (LIFO) principle. Each function call is pushed onto the stack, and once completed, it’s popped off.
+- **Microtask Queue**: The Microtask Queue has higher priority and includes tasks like Promises, Mutation Observers, and process.nextTick() (in Node.js). Microtasks are executed immediately after the current operation completes and before any macrotasks.
+- **Macrotask Queue**: The Macrotask Queue includes operations such as setTimeout, setInterval, setImmediate (Node.js), and I/O callbacks. Once all microtasks are completed, the event loop picks up macrotasks for execution.
+- **Event Loops**: The event loop ensures that asynchronous operations like API calls, timers, and callbacks are handled efficiently, allowing JavaScript to appear concurrent despite being single-threaded.
 
 ## Types of Functions
 
