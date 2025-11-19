@@ -5,16 +5,16 @@
 ## Table of Contents
 
 - [JavaScript]
-  - [Intro of Javascript] (#javascript)
-  - [Closure] (#closure)
+  - [Intro of Javascript](#javascript)
+  - [Closure](#closure)
   - [Variable Decleration](#variable-decleration)
-  - [Hoisting, Scoping, Execution Context] (#hoisting-scoping)
-  - [Event Loop & Asynchornous Of Javascript] (#event-loop)
+  - [Hoisting, Scoping, Execution Context](#hoisting-scoping)
+  - [Event Loop & Asynchornous Of Javascript](#event-loop)
   - [Types of Functions](#function-types)
-  - [Prototypes & Inheritance] (#prototypes)
-  - [The 'this' keyword] (#this-key)
-  - [Callback, Callback Hell] (#callbacks)
-  - [Promises & Async/Await] (#promises)
+  - [Prototypes & Inheritance](#prototypes)
+  - [The 'this' keyword](#this-key)
+  - [Callback, Callback Hell](#callbacks)
+  - [Promises & Async/Await](#promises)
 
 ### Intro of Javascript
 
