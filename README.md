@@ -25,6 +25,7 @@
 - In JavaScript, a closure is a function bundled together with its lexical environment. This means an inner function has access to the variables of its outer function even after the outer function has finished executing.
 - The inner function remembers and can access the outer function’s variables, allowing data to persist across different execution contexts.
 
+**Example 1:** 
 ```
 function OuterFn () {
   const outeVariable = 250
@@ -37,6 +38,77 @@ function OuterFn () {
 const clouserExample = OuterFn(); // Output : Trigger Outer Function Context 1
 clouserExample() // Output: Trigger Inner Function Context 2 and remembers Outer Function Variable' 250
 ```
+
+**Example 2:** Simple counter increment & decrement, it helps clean and re-usability, modularity, encapsulation, data privacy, etc.
+```
+const Counter = function () {
+  let count = 0;
+
+  return {
+    increament: () => {
+        count ++;
+    },
+    decreament : () => {
+        count --;
+    },
+    getCount: () => {
+      return count;
+    }
+  }
+}
+
+const myCounter = Counter();
+myCounter.increament(); // Adding by 1
+myCounter.increament(); // +1 = 2
+myCounter.increament(); // 2 +1 = 3;
+
+console.log("After increamenting Steps Executed The Value is :", myCounter.getCount()) // 3;
+
+myCounter.decreament();
+myCounter.decreament();
+
+console.log("After decreament Steps Executed The Value is :", myCounter.getCount()) // 1;
+
+```
+**Example 3:** What will this code output?
+
+```
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() {
+    console.log(i);
+    }, 1000);
+  }
+```
+It prints 3 three times! Why? By the time the setTimeout callbacks execute, the loop has finished and i is 3. All three
+Functions share the same i variable.
+
+
+**Solutions:**
+```
+// Use let (block scope)
+
+for (let i =0 ; i< 3; i++) {
+  setTimeout( function () {
+  console.log(i)
+  })
+}
+
+// Create a closure with IIFE 
+
+for (var i =0 ; i<3 ; i++) {
+
+  (function (i) {
+    setTimeout( function () {
+    console.log('check count', i)
+    },1)
+  })(i)
+}
+```
+**Key Notes:**
+- Closures allow functions to access variables from their outer scope
+- They enable data privacy and encapsulation
+- They’re created automatically when functions are defined
+- Understanding closures is crucial for working with callbacks, event handlers, and functional programming
 
 ## Variable Declaration
 - In JavaScript, variables can be declared using var, let, and const.
