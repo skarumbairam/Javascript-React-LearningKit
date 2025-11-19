@@ -182,7 +182,22 @@ console.log("Block scope:", i);                // ❌ ReferenceError
 - **Event Loops**: The event loop ensures that asynchronous operations like API calls, timers, and callbacks are handled efficiently, allowing JavaScript to appear concurrent despite being single-threaded.
 
 ## Types of Functions
+- **An anonymous**: A  function without a name or an unnamed function is called an anonymous function
+- **Named Function**: Named Function A function declared with a name is called a named function
+- **Function declaration**: Function Declaration A function declaration is the traditional way of defining a function. It uses the function keyword followed by the function name, parameters, and the function body. Function declarations are hoisted, meaning they are moved to the top of their scope before code execution starts. So you can call the function before it's declared in the code.
+- **Function Expression** A function expression is when you assign a function to a variable. It can be anonymous or named, and the function is not hoisted. Function expressions are not hoisted. The function definition is only available after the assignment, meaning you cannot call the function before it is defined.
+- **Arrow Functions** An arrow function is a concise syntax for writing function expressions. It behaves similarly to function expressions in terms of hoisting and definition.
+  ```
+  // Named Functions,  example of function declaration
+  function abc () {}
 
+  // Anonyms function, example of function expression
+  function () {}
+
+  // Arrow function (function expression)
+  () => {}
+  
+  ```
 ## Prototypes & Inheritance
 
 ## The 'this' keyword
