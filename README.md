@@ -9,6 +9,7 @@
   - [Hoisting, Scoping, Execution Context](#hoisting-scoping-execution-context)
   - [Event Loop and Asynchronous Javascript](#event-loop-and-asynchronous-javascript)
   - [Types of Functions](#types-of-functions)
+  - [HOC Functions](#hoc-functions)
   - [Prototypes & Inheritance](#prototypes--inheritance)
   - [The 'this' keyword](#the-this-keyword)
   - [Callback, Callback Hell](#callback-callback-hell)
@@ -144,6 +145,27 @@ console.log(age); // ReferenceError: age is not defined
       - During this uninitialized period, any attempt to access the variable results in a ReferenceError.
       - The TDZ exists from the start of the block until the line where the variable is actually declared and initialized.
 
+What’s the output?
+
+  ```
+  var a = 1;
+  function test() {
+    console.log(a);
+    var a = 2;
+    console.log(a);
+  }
+  test();
+ // Output : undefined 2
+  ```
+
+**Notes:**
+- Scope determines variable accessibility (global, function, block)
+- Lexical scope is based on where code is written
+- var is hoisted and initialized with undefined
+- let and const are hoisted but not initialized (TDZ)
+- Function declarations are fully hoisted
+- Understanding execution context helps debug scope issues
+
 - ### Scoping
   -  In JavaScript, there are three main types of scope:
   -  **Global Scope**: variables declared in the global scope can be accessed anywhere in the program. For example, the window object (in browsers) is globally accessible.
@@ -198,7 +220,55 @@ console.log("Block scope:", i);                // ❌ ReferenceError
   () => {}
   
   ```
+## HOC Functions
+
+- Higher-Order Functions (HOF) are functions that operate on other functions — either by taking them as arguments or by returning them as new functions.
+- In JavaScript, functions are first-class citizens, meaning they can be: Assigned to variables, Passed as arguments to other functions and Returned from other functions
+- A Higher-Order Function is one that takes another function as an input and/or returns a new function with extended or modified behavior.
+- This concept enables function composition, reusability, and abstraction, making JavaScript more flexible and expressive.
+
+```
+// Logger Function
+function addLogger(fn) {
+  return function (...args) {
+    console.log("unction is being called with :", args);
+    const result = fn(...args);
+    console.log("Function returned result :", result);
+  }
+}
+
+// Adding Numbers Function
+function add(a,b) {
+  return a+b;
+}
+
+// Add two numbers with logger
+const numbersWithLogger = addLogger(add);
+numbersWithLogger(5,4);
+
+```
+
 ## Prototypes & Inheritance
+- **Prototype**: In JavaScript, everything is object; every object has internal property is called [[Prototype]], which refers to another object known as **its** **prototype**
+- The prototype acts as a blueprint from which the object can inherit properties and methods.
+- **Prototype Chain**: When we try to access a property or method on an object , JavaScript first checks if it exists on the object itself.If not found, it looks up the prototype chain (i.e., in the object’s prototype). This continues until it reaches the end of the chain (Object.prototype).If the property is still not found, it returns undefined.
+- **Inheritance (Prototype-Based)**: JavaScript doesn’t have “classical inheritance” like Java or C++ — instead, it uses prototype-based inheritance.
+- Objects inherit directly from other objects via the prototype chain.
+
+- What’s the difference between ```__proto__``` and ```prototype``` ?
+  -  ```__proto__``` is the actual object used in the prototype chain lookup (exists on all objects)
+  -  ```prototype``` is a property on the constructor functions that become the ```__proto__``` of instances created with new
+
+```
+function Person(name) {
+  this.name = name;
+}
+
+const alice = new Person("Alice");
+console.log(alice.__proto__ === Person.prototype); // true
+console.log(Person.__proto__ === Function.prototype); // true
+```
+
 
 ## The 'this' keyword
 
