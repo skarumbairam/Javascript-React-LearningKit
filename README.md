@@ -12,6 +12,7 @@
   - [HOC Functions](#hoc-functions)
   - [Prototypes & Inheritance](#prototypes--inheritance)
   - [The 'this' keyword](#the-this-keyword)
+  - [Call, Apply, Bind Methods](#call-apply-bind-methods)
   - [Callback, Callback Hell](#callback-callback-hell)
   - [Promises & Async Await](#promises--async-await)
 
@@ -269,8 +270,46 @@ console.log(alice.__proto__ === Person.prototype); // true
 console.log(Person.__proto__ === Function.prototype); // true
 ```
 
-
 ## The 'this' keyword
+
+- In JavaScript, **this** refers to the **context** in which a function is executed. Its value depends on how the function is called, not where it’s defined. (it could be global context, object context, callback context, like when a button is clicked, etc.)
+- In the global context, this refers to the global object:
+- ```
+  console.log(this); // Window (in browser) or global (in Node.js)
+  function test() {
+    console.log(this);
+  }
+  test(); // Window (in non-strict mode)
+
+  "use strict";
+  function test1() {
+    console.log(this);
+  }
+  test1(); // undefined
+  ```
+  
+- When a function is called as an object method, this refers to that object:
+- ```
+    const person = {
+      name: "Alice",
+      greet: function() {
+        console.log(`Hello, ${this.name}`);
+      }
+    };
+    person.greet(); // "Hello, Alice"
+  ```
+
+  - Constructor Function, With new, this refers to the newly created object:
+  - ```
+      function Person(name) {
+        this.name = name;
+        this.greet = function() {
+        console.log(`Hello, ${this.name}`);
+        };
+      }
+      const alice = new Person("Alice");
+    ```
+## Call, Apply, Bind Methods
 
 ## Callback, Callback Hell
 
