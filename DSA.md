@@ -219,11 +219,54 @@ for (let i = 0; i < n; i++) {
 
 5. Pattern (Flip Triangle)
 ```
+
          *
        * *
      * * *
    * * * *
  * * * * *
 
+const n = 5;
+for (let i = 0; i < n; i++) {
+    let row = "";
+
+    { /* Create Empty Space */ }
+    
+    for (let j = 0; j < n-(i+1); j++) {
+        row = row + ' ';
+    }
+
+    { /* Create Star */ }
+    for (let k = 0; k < (i + 1); k++){
+        row = row + '*';
+    }
+
+    console.log(row);
+}
+
+```
+
+5. Pattern (Triangle number switch)
+```
+1
+1 0
+1 0 1
+1 0 1 0
+1 0 1 0 1
+
+const n = 6;
+for (let i = 0; i < n; i++) {
+    let row = "";
+    let toggle = 1;
+    for (let j = 0; j < i + 1; j++) {
+        row = row + toggle;
+        if (toggle === 1) {
+            toggle = 0;
+        } else {
+            toggle = 1;
+        }
+    }
+    console.log(row);
+}
 ```
 
