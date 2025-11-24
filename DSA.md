@@ -124,5 +124,106 @@
     const result = secondLargestNumber(arr);
     console.log(result) // -18
    ```
-   
+
+## Some Star & Pattern Problems with Using double loops (Nested Loop)
+
+1. Pattern (nxn):
+```
+*  *  *  *  
+*  *  *  *  
+*  *  *  *  
+*  *  *  * 
+
+**OR **
+
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+(to print number substitute * = j);
+
+const n = 4;
+for (let i=0; i<n; i++){
+    let row = "";
+    for(let j=0; j<n; j++){
+        row = row + "*";
+        // row = row + (j+1);
+    }
+ console.log(row);
+}
+```
+
+2. Pattern Triangle with * and number:
+```
+* 
+*  * 
+*  *  * 
+*  *  *  * 
+*  *  *  *  *
+
+**OR **
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+(to print number substitute * = j);
+
+const n = 5;
+
+for (let i=0; i<n; i++){
+    let row = "";
+    for(let j=0; j<i+1; j++){
+        row = row + "*";
+    }
+ console.log(row);
+}
+```
+
+3. Pattern Triangle (same row values)
+```
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+const n = 5;
+for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < i + 1; j++) {
+        row = row + (i+1);
+    }
+    console.log(row);
+}
+
+```
+4. Pattern (Reverse Triangle)
+```
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n - i; j++) {
+        row = row + (j + 1)
+    }
+    console.log(row);
+}
+
+```
+
+5. Pattern (Flip Triangle)
+```
+         *
+       * *
+     * * *
+   * * * *
+ * * * * *
+
+```
 
