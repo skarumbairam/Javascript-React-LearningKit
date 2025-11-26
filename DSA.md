@@ -269,4 +269,41 @@ for (let i = 0; i < n; i++) {
     console.log(row);
 }
 ```
+## Count Digit pattern Problems & things to note
 
+Note: 
+- Math.floor → Rounds down to the nearest integer Math.floor(4.9) => 4
+- Math.ceil → Rounds up to the nearest integer Math.ceil(4.1) => 5
+- Math.round → Round to nearest (4.5 → 5), (4.4 → 4)
+- Math.abs → Returns the absolute value (negative becomes positive, positive stays positive)
+  
+1.  Given an integer num, return the number of digits in num.
+```
+Input: num = 7, Output: 1
+Input: num = 100, Output = 3
+Input: num = -2030, output = 4
+
+function countDigit(num) {
+    // Handle 0 case
+    if (num === 0) return 1;
+
+    // Handle negative, this converts to a positive number
+    num = Math.abs(num);
+
+    let count = 0;
+
+    while (num > 0) {
+        num = Math.floor(num / 10); // Math.floor will round off Down 
+        count++;
+    }
+
+    return count;
+}
+
+const getDigitCount = countDigit(23050);
+console.log(getDigitCount);
+```
+
+2.  Check if the given number is a palindrome.
+
+   
