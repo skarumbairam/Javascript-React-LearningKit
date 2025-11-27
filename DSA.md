@@ -128,6 +128,7 @@
 ## Some Star & Pattern Problems with Using double loops (Nested Loop)
 
 1. Pattern (nxn):
+   
 ```
 *  *  *  *  
 *  *  *  *  
@@ -154,6 +155,7 @@ for (let i=0; i<n; i++){
 ```
 
 2. Pattern Triangle with * and number:
+   
 ```
 * 
 *  * 
@@ -182,6 +184,7 @@ for (let i=0; i<n; i++){
 ```
 
 3. Pattern Triangle (same row values)
+   
 ```
 1
 2 2
@@ -200,6 +203,7 @@ for (let i = 0; i < n; i++) {
 
 ```
 4. Pattern (Reverse Triangle)
+   
 ```
 1 2 3 4 5
 1 2 3 4
@@ -218,6 +222,7 @@ for (let i = 0; i < n; i++) {
 ```
 
 5. Pattern (Flip Triangle)
+   
 ```
 
          *
@@ -247,6 +252,7 @@ for (let i = 0; i < n; i++) {
 ```
 
 5. Pattern (Triangle number switch)
+
 ```
 1
 1 0
@@ -278,6 +284,7 @@ Note:
 - Math.abs → Returns the absolute value (negative becomes positive, positive stays positive)
   
 1.  Given an integer num, return the number of digits in num.
+   
 ```
 Input: num = 7, Output: 1
 Input: num = 100, Output = 3
@@ -305,5 +312,101 @@ console.log(getDigitCount);
 ```
 
 2.  Check if the given number is a palindrome.
+   
+```
+    Important Note:
+       - Remove last digit from the number -> number/10
+       - Get the last digit from the number  -> number % 10
+     
+    function palindrome(num) {
+        // Handle 0 case
+        if (num === 0) return 1;
+    
+        const numCopy = num;
+        console.log('num ' + numCopy);
+        num = Math.abs(num);
+        let reverse = 0;
+        while (num > 0) {
+           
+            let remainder = num % 10;
+            num = Math.floor(num / 10);
+            reverse = (10 * reverse) + remainder;
+            console.log(reverse);
+        }
+    
+        console.log('reverse ' + reverse);
+        return numCopy === reverse;
+    }
+    
+    const isPolindrome = palindrome(-2002);
+    console.log(isPolindrome);
+```
 
+3. Reverse the number
+
+```
+- Input 24563: output 36542
+- Input -345: output -543
+ 
+    function revenseNumber(num) {
+        // Handle 0 case
+        if (num === 0) return 1;
+    
+        const numCopy = num;
+        console.log('num ' + numCopy);
+    
+        num = Math.abs(num);
+        let reverse = 0;
+    
+        while (num > 0) {
+            let remainder = num % 10;
+            num = Math.floor(num / 10);
+            reverse = (10 * reverse) + remainder;
+        }
+    
+        return numCopy < 0 ? -reverse : reverse;
+    }
+    
+    const getReverseNumber = revenseNumber(-234763);
+    console.log(getReverseNumber);
+```
+
+## Some Array Problems
+
+1. Remove duplicates from a sorted array (Leetcode 26), Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+
+```
+Example 1:
+    Input: nums = [1,1,2]
+    Output: 2, nums = [1,2,_]
+    Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+    It does not matter what you leave beyond the returned k (hence they are underscores).
+Example 2:
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+
+    function removeDuplicates(arr) {
+    
+            let x = 0;
+           // const uniqueArry = [];
+            for (let i = 0; i < arr.length; i++) {
+                // uniqueArry[0] = arr[0];
+                if (arr[i] > arr[x]) {
+                    x = x + 1;
+                    arr[x] = arr[i];
+                  // uniqueArry[x] = arr[i];
+                }
+            }
+        
+            console.log(arr);
+          //  console.log(uniqueArry);
+            return x+1;
+     }
+    
+    const array = [0,0,1,1,2,2,3,3];
+    const getUniqueArray = removeDuplicates(array);
+    console.log(getUniqueArray);
+```
    
