@@ -9,7 +9,8 @@
 7.  Reverse the number
 8.  Check if the given number is a palindrome, true or false: 7447 - true, 84523 - false
 9.  Remove duplicates from the given sorted array (Non Decreasing Order - which means array can contain duplicate values) ( Increasing order : a[i+1] > a[i], decreasing order : a[i+1] < a[i])
-10.  
+10. Remove a specific element from the array in place
+11. Reverse the array elements in place (not using inbuilt methods)
 
 ## Some Problems with Using Loops and Arrays
 
@@ -444,4 +445,25 @@ const array = [3,2,1,5,3];
 const getUniqueArray = removeDuplicates(array, 3);
 console.log(getUniqueArray);
 ```
-   
+3. Reverse element in the array (in-place)
+
+```
+function reverseString(arr) {
+  let length = arr.length;
+  let halfLength = Math.floor(length * 0.5);
+  for (let i = 0; i < halfLength; i++) {
+    let temp = arr[i];
+
+    arr[i] = arr[length - 1 - i];
+    arr[length - 1 - i] = temp;
+
+  }
+  console.log(arr);
+}
+
+const array = ["S", "E", "N", "T", "H", "I", "L"];
+
+const getUniqueArray = reverseString(array);
+console.log(getUniqueArray);
+
+```
