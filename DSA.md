@@ -420,6 +420,28 @@ It does not matter what you leave beyond the returned k (hence they are undersco
     const getUniqueArray = removeDuplicates(array);
     console.log(getUniqueArray);
 ```
+2. Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. (Leet Code 27)
 
+```
+function removeDuplicates(arr, val) {
 
+  let x = 0;
+  let modified = [];
+  for (let i = 0; i < arr.length; i++) {
+
+    if (arr[i] !== val) {
+      modified[x] = arr[i];
+      x = x + 1;
+    } 
+  }
+
+  console.log(modified)
+  return x;
+}
+
+const array = [3,2,1,5,3];
+
+const getUniqueArray = removeDuplicates(array, 3);
+console.log(getUniqueArray);
+```
    
