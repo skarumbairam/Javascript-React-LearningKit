@@ -1,5 +1,16 @@
 # Data Structure & Algorithms (Thanks to Namaste JS Akshay Shaini)
 
+1. Given an array [10,40,20,54,100], find the index of the specific element; if the number is not found, return -1.\
+2. Get the number of repetitions of negative integers in the array [-10,40,-20,54,100]
+3.  Find the greatest number in the given array [-10,40,-20,54,100]
+4.  Find the smallest number in the given array [-10,-40,-20, -54, -100]
+5.  Find the second largest number in the given array [10,40,20,54,100]
+6.  Given an integer num, return the number of digits in num , let num=3457756, output = 7
+7.  Reverse the number
+8.  Check if the given number is a palindrome, true or false: 7447 - true, 84523 - false
+9.  Remove duplicates from the given sorted array (Non Decreasing Order - which means array can contain duplicate values) ( Increasing order : a[i+1] > a[i], decreasing order : a[i+1] < a[i])
+10.  
+
 ## Some Problems with Using Loops and Arrays
 
 1. Question: Given an array [10,40,20,54,100], find the index of the specific element; if the number is not found, return -1.
@@ -409,4 +420,6 @@ It does not matter what you leave beyond the returned k (hence they are undersco
     const getUniqueArray = removeDuplicates(array);
     console.log(getUniqueArray);
 ```
+
+
    
